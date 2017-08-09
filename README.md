@@ -3,7 +3,11 @@
 ## Usage
 
 ```elixir
-Github.get("mrkjlchvz") # -> returns my repositories
+{:ok, pid} = Github.start()
+
+Github.get("mrkjlchvz")
+Github.get("ccelestial")
+Github.get("bnicart")
 ```
 
 ## Installation
