@@ -9,6 +9,10 @@ It enables a caching mechanism that stores the username as a key and his/her
 repositories as its value. So that subsequent calls to the same *username*
 will not call GitHub.
 
+**TODOs**:
+- Capability to sync a username with GitHub so when a new repository is added to
+an already-cached user, the state will update to reflect the latest.
+
 ## Simple Usage
 
 ```elixir
