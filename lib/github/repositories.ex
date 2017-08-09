@@ -24,6 +24,7 @@ defmodule Github.Repositories do
     body
     |> JSON.decode
     |> get_result
+    |> format_result
     |> update_state(username)
   end
 
@@ -37,10 +38,13 @@ defmodule Github.Repositories do
 
   defp get_result({:ok, result}), do: result
 
+  defp format_result(result) do
+    Enum.map(result, fn(repo) -> Map.get(repo, "name") end)
+  end
+
   defp update_state(results, username) do
     Agent.get_and_update(@me, fn state ->
-      updated_state = Map.put(state, username, results)
-      {updated_state, updated_state}
+      {results, Map.put(state, username, results)}
     end)
   end
 
