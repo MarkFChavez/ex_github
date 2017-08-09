@@ -11,7 +11,7 @@ will not call GitHub.
 
 ## Implementations
 
-Without Supervisor -> Use `master` branch
+Without Supervisor -> Use `master` branch  
 With Supervisor    -> Use `with_supervisor` branch
 
 ## Usage
