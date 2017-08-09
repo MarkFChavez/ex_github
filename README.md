@@ -23,7 +23,7 @@ Github.get("ccelestial")
 Github.get("bnicart")
 ```
 
-## Advanced Usage (Testing concurrent capability)
+## Concurrency Demo
 
 ```elixir
 {:ok, pid} = Github.start()
