@@ -12,10 +12,6 @@ defmodule Github.Repositories do
     |> really_get(username)
   end
 
-  def intentionally_fail do
-    Agent.get(@me, fn _ -> exit(:boom) end)
-  end
-
   defp really_get(_username_not_found = nil, username) do
     HTTPoison.start()
     HTTPoison.get!("#{@base_uri}/users/#{username}/repos")
