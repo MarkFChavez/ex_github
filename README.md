@@ -1,5 +1,14 @@
 # Github
 
+This is a basic implementation of fetching a list of GitHub repositories by
+passing in a username.
+
+## So What's Special?
+
+It enables a caching mechanism that stores the username as a key and his/her
+repositories as its value. So that subsequent calls to the same *username*
+will not call GitHub.
+
 ## Usage
 
 ```elixir
