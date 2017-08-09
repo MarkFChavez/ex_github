@@ -2,8 +2,8 @@
 
 ## Usage
 
-```elixir-lang
-Github.get("mrkjlchvz") -> returns my repositories
+```elixir
+Github.get("mrkjlchvz") # -> returns my repositories
 ```
 
 ## Installation

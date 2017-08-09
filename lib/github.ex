@@ -1,18 +1,7 @@
 defmodule Github do
-  @moduledoc """
-  Documentation for Github.
-  """
 
-  @doc """
-  Hello world.
+  alias Github.Repositories
+  
+  defdelegate get(username), to: Repositories
 
-  ## Examples
-
-      iex> Github.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
