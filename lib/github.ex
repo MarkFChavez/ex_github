@@ -2,7 +2,7 @@ defmodule Github do
 
   alias Github.Repositories
 
-  defdelegate start(), to: Repositories
-  defdelegate get(username), to: Repositories
+  defdelegate get(username),      to: Repositories
+  defdelegate intentionally_fail, to: Repositories
 
 end
