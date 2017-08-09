@@ -9,7 +9,7 @@ It enables a caching mechanism that stores the username as a key and his/her
 repositories as its value. So that subsequent calls to the same *username*
 will not call GitHub.
 
-## Usage
+## Simple Usage
 
 ```elixir
 {:ok, pid} = Github.start()
@@ -17,6 +17,20 @@ will not call GitHub.
 Github.get("mrkjlchvz")
 Github.get("ccelestial")
 Github.get("bnicart")
+```
+
+## Advanced Usage (Testing concurrent capability)
+
+```elixir
+{:ok, pid} = Github.start()
+
+usernames = ["mrkjlchvz", "bnicart", "ccelestial"]
+
+Enum.each usernames, fn username ->
+  spawn fn -> Github.get(username) end
+end
+
+Github.get("mrkjlchvz") # should access from cache
 ```
 
 ## Installation
