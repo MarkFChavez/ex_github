@@ -9,6 +9,11 @@ It enables a caching mechanism that stores the username as a key and his/her
 repositories as its value. So that subsequent calls to the same *username*
 will not call GitHub.
 
+## Implementations
+
+Without Supervisor -> Use `master` branch
+With Supervisor    -> Use `with_supervisor` branch
+
 ## Usage
 
 ```elixir
